@@ -1,0 +1,6 @@
+@import url(./forms.css);
+
+
+  .checkbox {
+    @apply border border-gray-300 rounded text-blue-600 focus:ring focus:ring-offset-0 focus:ring-blue-200 transition duration-300 ease-in !important;
+  }

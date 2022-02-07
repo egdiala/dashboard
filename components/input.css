@@ -1,0 +1,5 @@
+@import url(./forms.css);
+
+  .input {
+    @apply bg-transparent border border-gray-300 text-gray-900 font-normal rounded-md focus:border-blue-200 block w-full h-10 px-2.5 py-2 transition duration-300 ease-in;
+  }
