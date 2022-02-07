@@ -1,4 +1,4 @@
-# UntitledUI
+# dashboard-ui
 
 ## Build Setup
 

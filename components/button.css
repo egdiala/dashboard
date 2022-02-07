@@ -1,0 +1,21 @@
+@import url( ./../assets/css/main.css);
+
+
+  .button {
+    @apply font-medium rounded-lg cursor-pointer select-none text-center justify-center inline-flex items-center space-x-2.5 py-2.5 px-4 !important;
+    width: fit-content;
+    height: fit-content;
+    font-family: 'Inter', sans-serif;
+  }
+  .button--regular {
+    @apply text-white text-sm bg-purple-600 focus:ring focus:ring-purple-200 transition duration-300 ease-in !important;
+  }
+  .button--outlined {
+    @apply text-gray-700 text-sm bg-transparent border border-[#D0D5DD] hover:bg-[#D0D5DD]/10 !important;
+  }
+  .button--text {
+    @apply text-gray-700 text-base bg-transparent hover:bg-gray-50 transition duration-300 ease-in !important;
+  }
+  .nuxt-link-exact-active {
+    @apply bg-gray-50 !important;
+  }
