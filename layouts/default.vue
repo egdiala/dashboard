@@ -1,12 +1,14 @@
 <template>
-<div>
-  hello
-    <Nuxt />
-</div>
+    <div>
+        <Navbar></Navbar>
+        <Nuxt/>
+    </div>
 </template>
  
 <script>
+import Navbar from "../components/Navbar.vue";
 export default {
-    name: 'DefaultLayout'
+    name: 'DefaultLayout',
+    components: { Navbar }
 }
 </script>

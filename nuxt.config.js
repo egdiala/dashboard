@@ -38,7 +38,8 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/eslint
     '@nuxtjs/eslint-module',
-    '@nuxt/postcss8'
+    '@nuxt/postcss8',
+    '@nuxtclub/feathericons'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
