@@ -1,5 +1,5 @@
 <template>
-  <Main class="space-y-8 pb-24">
+  <Main class="space-y-8 lg:pb-24 pb-12">
     <section>
       <div class="container mx-auto lg:px-8 px-4">
         <div class="flex lg:flex-row lg:space-x-4 flex-col space-y-4 justify-between lg:items-start">
@@ -59,8 +59,9 @@
       </div>
     </section>
     <section>
-      <div class="container mx-auto lg:px-8 px-4 space-y-6">
-        <div class="flex lg:flex-row flex-col lg:space-x-4 items-center">
+      <div class="container mx-auto lg:px-8 space-y-6">
+        <div class="flex lg:flex-row flex-col lg:space-x-4 px-4 items-center">
+          <!-- show on large screen, hide on small screen -->
           <div class="lg:flex space-x-3 items-center grow lg:order-1 hidden">
             <FilterItem>All time</FilterItem>
             <FilterItem>US, AU, +4</FilterItem>
@@ -70,6 +71,7 @@
                 </svg>
             </Button>
           </div>
+          <!-- show on small screen, hide on large screen -->
           <div class="flex lg:flex-row flex-col items-center w-full lg:space-y-0 space-y-3 lg:w-3/12 lg:order-2 order-1">
             <Input icon="search" placeholder="Search"></Input>
             <div class="lg:hidden w-full">
@@ -79,17 +81,24 @@
                 </svg>
               </Button>
             </div>
+            <div class="lg:hidden w-full flex items-center space-x-3">
+              <Chip>All time</Chip>
+              <Chip>US, AU, +4</Chip>
+            </div>
           </div>
         </div>
-        <div class="lg:w-full w-screen lg:overflow-x-hidden overflow-x-scroll border border-[#EAECF0] rounded-lg">
+        <!-- Company table -->
+        <div class="lg:w-full lg:left-auto lg:relative lg:right-auto lg:overflow-x-hidden left-0 right-0 overflow-x-scroll border border-[#EAECF0] lg:rounded-lg rounded-none lg:shadow-none shadow-md">
           <table class="table-auto w-full">
             <thead>
               <tr class="text-gray-500 text-left text-xs">
-                <th class="px-6 py-3 flex space-x-3 items-center">
-                  <Checkbox/>
-                  <div class="flex space-x-1 items-center"><span class="font-normal">Company</span><Icon icon="arrow-down"></Icon></div>
+                <th class="px-6 py-3">
+                  <div class="flex space-x-3 items-center">
+                    <Checkbox/>
+                    <div class="flex space-x-1 items-center"><span class="font-normal">Company</span><Icon icon="arrow-down"></Icon></div>
+                  </div>
                 </th>
-                <th class="px-6 py-3 font-normal">License use</th>
+                <th class="px-6 py-3 font-normal"><span class="inline-block">License use</span></th>
                 <th class="px-6 py-3 font-normal">Status</th>
                 <th class="px-6 py-3 font-normal">Users</th>
                 <th class="px-6 py-3 font-normal">About</th>
@@ -140,12 +149,20 @@
               </tr>
             </tbody>
           </table>
-          <div class="flex items-center justify-between px-6 pb-4 pt-2.5">
+          <div class="lg:flex hidden items-center justify-between px-6 pb-4 pt-2.5">
             <div class="flex items-center space-x-3">
               <Button label="Previous" outlined></Button>
               <Button label="Next" outlined></Button>
             </div>
             <span class="text-gray-700 font-medium text-sm">Page 1 of 10</span>
+          </div>
+        </div>
+        <div class="lg:hidden flex flex-col space-y-2 px-4">
+          <hr class="bg-gray-200">
+          <div class="flex items-center justify-between">
+            <Button icon="arrow-left" iconbutton></Button>
+              <span class="text-gray-700 font-medium text-sm">Page 1 of 10</span>
+            <Button icon="arrow-right" iconbutton></Button>
           </div>
         </div>
       </div>
@@ -161,9 +178,10 @@ import Icon from "../components/Icon.vue";
 import Checkbox from "../components/Checkbox.vue";
 import Progress from "../components/Progress.vue";
 import Badge from "../components/Badge.vue";
+import Chip from "../components/Chip.vue";
 export default {
     name: "IndexPage",
-    components: { Main, Button, FilterItem, Icon, Checkbox, Progress, Badge },
+    components: { Main, Button, FilterItem, Icon, Checkbox, Progress, Badge, Chip },
     data() {
       return {
         cards: [

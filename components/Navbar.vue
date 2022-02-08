@@ -1,5 +1,5 @@
 <template>
-<div>
+<div class="sticky z-10 top-0">
   <nav class="navbar flex">
     <div class="container mx-auto lg:py-4 lg:px-8 pl-4 py-4 pr-2 flex items-center justify-between">
       <div class="flex items-center space-x-4">
