@@ -1,5 +1,5 @@
 <template>
-    <main class="flex-1 overflow-y-scroll lg:pt-12 pt-8">
+    <main class="flex-1 lg:pt-12 pt-8">
         <slot></slot>
     </main>
 </template>

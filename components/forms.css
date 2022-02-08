@@ -16,7 +16,7 @@
   [multiple],
   textarea,
   select {
-    @apply w-full border border-gray-300 rounded-lg focus:border-indigo-500 focus:ring-indigo-500 transition duration-300 ease-in !important;
+    @apply w-full border border-gray-300 rounded-lg focus:border-purple-500 focus:ring-purple-500 transition duration-300 ease-in !important;
   }
   [type="checkbox"] {
     @apply border-gray-300 rounded text-purple-600 focus:ring-purple-200 transition duration-300 ease-in !important;
@@ -27,5 +27,12 @@
 
   .nova-label {
     @apply block text-sm font-medium text-gray-700 transition duration-300 ease-in !important;
+  }
+
+  input[type=checkbox]:checked {
+    @apply border border-purple-600 text-purple-600 bg-purple-50 !important;
+  }
+  input[type="checkbox"]:checked::after {
+   @apply border border-purple-600 text-purple-600 bg-purple-50 !important;
   }
 }

@@ -4,4 +4,5 @@
 
 body {
     @apply h-screen;
+    font-family: 'Inter', sans-serif !important;
 }

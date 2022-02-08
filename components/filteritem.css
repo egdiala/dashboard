@@ -1,0 +1,5 @@
+@import url( ./../assets/css/main.css);
+
+.filter-item {
+    @apply bg-purple-50 text-purple-700 py-2.5 px-4 font-medium text-sm flex space-x-2 items-center rounded-lg !important;
+}
