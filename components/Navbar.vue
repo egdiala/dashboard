@@ -1,5 +1,5 @@
 <template>
-<div>
+<div class="sticky z-10 top-0">
   <nav class="navbar flex">
     <div class="container mx-auto lg:py-4 lg:px-8 pl-4 py-4 pr-2 flex items-center justify-between">
       <div class="flex items-center space-x-4">
@@ -11,8 +11,8 @@
       <div class="lg:flex hidden items-center space-x-4">
         <Button label="Upgrade now" icon="zap" outlined></Button>
         <div class="flex items-center space-x-1">
-          <Button icon="settings" text></Button>
-          <Button icon="bell" text></Button>
+          <Button icon="settings" iconbutton></Button>
+          <Button icon="bell" iconbutton></Button>
         </div>
         <img src="./../static/Avatar.png" alt="User" class="lg:h-8 rounded-full">
       </div>
