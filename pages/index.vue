@@ -60,7 +60,7 @@
     </section>
     <section>
       <div class="container mx-auto lg:px-8 space-y-6">
-        <div class="flex lg:flex-row flex-col lg:space-x-4 px-4 items-center">
+        <div class="flex lg:flex-row flex-col lg:space-x-4 lg:px-0 px-4 items-center">
           <!-- show on large screen, hide on small screen -->
           <div class="lg:flex space-x-3 items-center grow lg:order-1 hidden">
             <FilterItem>All time</FilterItem>

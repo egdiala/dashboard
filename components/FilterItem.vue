@@ -1,7 +1,9 @@
 <template>
-    <div class="filter-item">
+    <div v-if="show" class="filter-item">
         <span><slot></slot></span>
-        <Icon icon="x"></Icon>
+        <button type="button" class="bg-transparent cursor-pointer border-none text-purple-700 text-xs chip-close" @click="show = false">
+            <Icon icon="x"></Icon>
+        </button>
     </div>
 </template>
 
@@ -9,12 +11,17 @@
 import './filteritem.css';
 import Icon from "./Icon.vue";
 export default {
-    components: { Icon }
+    components: { Icon },
+    data() {
+        return {
+            show: true,
+        }
+    },
 }
 </script>
 
 <style>
-.filter-item div .feather-x {
+.filter-item button div .feather-x {
     width: 20px;
     height: 20px;
 }
