@@ -2,5 +2,19 @@
 
 
   .checkbox {
-    @apply border border-gray-300 rounded text-purple-600 focus:ring focus:ring-offset-0 focus:ring-purple-200 transition duration-300 ease-in !important;
+    @apply border border-gray-300 rounded-md text-purple-600 focus:ring focus:ring-offset-0 focus:ring-purple-200 transition duration-300 ease-in !important;
   }
+
+  input[type='checkbox']:checked + svg {
+  	display: block;
+  }
+
+  /* input[type='checkbox']:checked + div {
+    @apply border-purple-600 transition duration-300 ease-in;
+  }
+  input:checked + div svg {
+    @apply block;
+  }
+  input[type='checkbox']::focus div {
+    @apply ring ring-offset-0 ring-purple-200 transition duration-300 ease-in;
+  } */

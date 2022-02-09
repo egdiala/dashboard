@@ -94,7 +94,7 @@
               <tr class="text-gray-500 text-left text-xs">
                 <th class="px-6 py-3">
                   <div class="flex space-x-3 items-center">
-                    <Checkbox/>
+                    <Checkbox :intermediate="true"/>
                     <div class="flex space-x-1 items-center"><span class="font-normal">Company</span><Icon icon="arrow-down"></Icon></div>
                   </div>
                 </th>
@@ -109,7 +109,7 @@
               <tr v-for="(company, n) in companies" :key="n" class="even:bg-white odd:bg-gray-50">
                 <td class="px-6 py-3">
                   <div class="flex space-x-3 items-center">
-                    <Checkbox/>
+                    <Checkbox :checked="company.checked" />
                     <div class="w-10 h-10">
                       <img :src="require(`./../static/${company.logo}.png`)">
                     </div>
@@ -213,7 +213,8 @@ export default {
               unavailable: '+5'
             },
             title: 'Content curating app',
-            subtitle: 'Brings all your news into one place'
+            subtitle: 'Brings all your news into one place',
+            checked: true
           },
           {
             logo: 'Avatarbrand-1',
@@ -226,7 +227,8 @@ export default {
               unavailable: '+8'
             },
             title: 'Design software',
-            subtitle: 'Super lightweight design app'
+            subtitle: 'Super lightweight design app',
+            checked: true
           },
           {
             logo: 'Avatarbrand-2',
@@ -239,7 +241,8 @@ export default {
               unavailable: '+2'
             },
             title: 'Data prediction',
-            subtitle: 'AI and machine learning data'
+            subtitle: 'AI and machine learning data',
+            checked: true
           },
           {
             logo: 'Avatarbrand-3',
@@ -251,7 +254,8 @@ export default {
               available: ['Avataruser-4', 'Avataruser-1', 'Avataruser-5', 'Avataruser-6', 'Avataruser-10'],
             },
             title: 'Productivity app',
-            subtitle: 'Time management and productivity'
+            subtitle: 'Time management and productivity',
+            checked: false
           },
           {
             logo: 'Avatarbrand-4',
@@ -264,7 +268,8 @@ export default {
               unavailable: '+1'
             },
             title: 'Web app integrations',
-            subtitle: 'Connect web apps seamlessly'
+            subtitle: 'Connect web apps seamlessly',
+            checked: false
           },
           {
             logo: 'Avatarbrand-5',
@@ -277,7 +282,8 @@ export default {
               unavailable: '+6'
             },
             title: 'Sales CRM',
-            subtitle: 'Web-based sales doc management'
+            subtitle: 'Web-based sales doc management',
+            checked: true
           },
           {
             logo: 'Avatarbrand-6',
@@ -290,7 +296,8 @@ export default {
               unavailable: '+4'
             },
             title: 'Automation and workflow',
-            subtitle: 'Time tracking, invoicing and expenses'
+            subtitle: 'Time tracking, invoicing and expenses',
+            checked: true
           },
         ]
       }
